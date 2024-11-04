@@ -10,13 +10,13 @@
         "laravel/tinker": "^2.9"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.23",
-        "laravel/breeze": "^2.2",
-        "laravel/pint": "^1.13",
-        "laravel/sail": "^1.26",
-        "mockery/mockery": "^1.6",
+        "fakerphp/faker": "v1.23.0",
+        "laravel/breeze": "v2.2",
+        "laravel/pint": "v1.13",
+        "laravel/sail": "v1.26",
+        "mockery/mockery": "v1.5",
         "nunomaduro/collision": "^8.0",
-        "phpunit/phpunit": "^11.0.1"
+        "phpunit/phpunit": "v11.0.1"
     },
     "autoload": {
         "psr-4": {
