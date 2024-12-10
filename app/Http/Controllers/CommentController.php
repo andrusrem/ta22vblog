@@ -11,7 +11,7 @@ class CommentController extends Controller
 {
     public function index()
     {
-        $comments = Comment::with(['user', 'post'])->get(); // Eager load user and post relationships
+        $comments = Comment::with(['user', 'post'])->paginate(10); // Eager load user and post relationships
         return view('comments.index', compact('comments'));
     }
 

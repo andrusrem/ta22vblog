@@ -32,9 +32,13 @@ Route::middleware('auth')->group(function () {
     Route::resource('/admin/posts', PostController::class);
     Route::resource('/admin/comments', CommentController::class);
     Route::resource('/admin/users', UserController::class);
+    Route::resource('/admin/tags', TagController::class);
 
     Route::post('/post/{post}/like', [PublicController::class, 'like'])->name('like');
     Route::resource('/post/comments/create/', CommentController::class);
+    Route::get('/tags', [TagController::class, 'index'])->name('tags.index');
+    Route::get('/tags/create', [TagController::class, 'create'])->name('tags.create');
+    Route::post('/tags', [TagController::class, 'store'])->name('tags.store');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
